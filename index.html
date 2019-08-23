@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim So Lon Nhat</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhap vao so can tim");
+    let arr = new Array();
+    for (i = 0 ; i < 100; i++){
+        arr.push(Math.floor(Math.random()*100)+1)
+    }
+    let maxNum = findMax(arr,number);
+
+    document.write(maxNum);
+
+
+
+
+    function findMax(arr,number) {
+        let max = number;
+
+        for (i = 0 ; i < arr.length; i++){
+            if (arr[i] > max){
+                max = arr[i];
+
+                return max;
+            }
+        }
+
+        return max;
+    }
+</script>
+</body>
+</html>
